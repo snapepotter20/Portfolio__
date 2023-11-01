@@ -1,0 +1,87 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.skillsTitle {
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 1.5%;
+}
+
+.skillsDescription {
+    margin: 0 auto;
+    margin-bottom: 1.5%;
+    font-size: 20px;
+    width: 600px;
+}
+
+.skillsBars {
+    text-align: left;
+    width: 75%;
+    margin: 10px auto;
+}
+
+.skillsBar1 {
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 20px;
+    background: rgb(50,50,50);
+}
+
+.skillsBarText1 {
+    padding: 0 auto;
+    margin-left: 70px;
+    text-align: left;
+}
+.skillsBarText1Btn {
+    background: #8bd3bb;
+    padding: 1%;
+    margin: 2%;
+    border: none;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: large;
+}
+.skillsBarImg {
+  width: 160px;
+  height: 137px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 560px) {
+    .skillsDescription{
+        width: 250px;
+    }
+    .skillsTitle {
+        margin: 0 auto;
+        font-size: 30px;
+    }
+    .skillsBar1 {
+        width: 100%;
+    }
+    .skillsBarImg {
+        width: 104px;
+        height: 80px;
+    }
+
+.skillsBarText1 {
+    margin-left: 21px;
+}
+    .skillsBarText1Btn {
+        width: 90px;
+        font-size: small;
+    }
+    .skillsBarText1h1 {
+        font-size: small;
+        margin-left: 21px;
+    }
+}

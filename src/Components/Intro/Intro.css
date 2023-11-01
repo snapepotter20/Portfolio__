@@ -1,0 +1,115 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.introContent {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  margin: 5%;
+  margin-top: 7%;
+  width: 500px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+.introContent1 {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  margin: 5%;
+  margin-top: 8%;
+  width: 100vw;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.introName {
+  color: #8bd3bb;
+}
+
+.introPara {
+  font-size: large;
+  font-weight: 100;
+  margin: 5% 0;
+}
+.introPara2 {
+  font-size: medium;
+  font-weight: 200;
+  margin: 2% 0;
+}
+
+.bg {
+  display: inline-block;
+  width: 25%;
+  object-fit: cover;
+  margin-top: 2%;
+}
+
+.introButton {
+  background: white;
+  /* margin: 2% 0; */
+  padding: 2%;
+  border: none;
+  width: 110px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 820px) {
+  .bg {
+    width: 34%;
+    margin-top: -20%;
+    margin-right: 33px;
+  }
+  .intro {
+    margin-top: 70px;
+  }
+  .introButton {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 560px)  {
+    .intro {
+        flex-direction: column-reverse;
+        margin-top: 30px;
+        text-align: center;
+      }
+      .bg {
+        width: 50%;
+        margin-top: 6%;
+        right: -10%;
+      }
+      .introContent {
+        max-width: 50vw;
+        align-items: center;
+      }
+      .introContent1 {
+        max-width: 50vw;
+      }
+      .introButton {
+        width: 80px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .hello {
+        font-size: large;
+      }
+      .introText {
+        font-size: 30px;
+      }
+}

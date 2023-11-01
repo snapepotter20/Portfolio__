@@ -1,0 +1,92 @@
+.contact {
+  text-align: center;
+}
+
+.contactPageTitle {
+  align-items: center;
+  font-size: 40px;
+  margin-bottom: 1.5%;
+  margin-top: 60px;
+  color: #fff;
+}
+
+.contactDesc {
+  margin: 0 auto;
+  margin-bottom: 1.5%;
+  font-size: 20px;
+  width: 600px;
+  color: #fff;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.name,
+.email,
+.msg {
+  font-size: medium;
+  width: 100%;
+  margin: 2%;
+  padding: 2% 3%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background: rgb(40, 40, 40);
+}
+
+.submitBtn {
+  background: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 14px 0;
+  width: 20%;
+  font: normal 500 18px Roboto;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link {
+  object-fit: cover;
+  width: 8%;
+  margin: 4% 2%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 560px) {
+  .contactPageTitle {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    width: 240px;
+  }
+
+  .contactDesc {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    font-size: 20px;
+    width: 240px;
+  }
+  .contactForm {
+    width: 280px;
+  }
+  .submitBtn {
+    padding: 9px;
+    margin: 9px 0;
+    width: 25%;
+    font: normal 500 14px Roboto;
+  }
+}
