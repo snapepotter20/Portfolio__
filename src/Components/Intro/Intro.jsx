@@ -12,7 +12,7 @@ const Intro = () => {
       <div className={flag ? 'introContent1' : 'introContent'}>
         <span className="hello">Hello,</span>
         <span className="introText">
-          I'm <span className="introName">Sahil Kumar</span> <br /> Frontend
+          I'm <span className="introName">Sahil Kumar</span> <br /> Fullstack
           Developer
         </span>
         <p className="introPara">

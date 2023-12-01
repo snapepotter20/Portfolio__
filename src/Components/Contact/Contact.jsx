@@ -1,8 +1,22 @@
-import React from "react";
+import React , {useRef} from "react";
 import "./Contact.css";
 import { facebookIcon, linkedin, github } from "../../assets";
+// import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
+    const form =useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+        e.target.reset();
+        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+        //   .then((result) => {
+        //       console.log(result.text);
+        //   }, (error) => {
+        //       console.log(error.text);
+        //   });
+      };
+    
   return (
     <section id="contactPage">
       <div className="contact">
@@ -10,7 +24,7 @@ const Contact = () => {
         <p className="contactDesc">
           Please fill out the form below to discuss any work opportunities.
         </p>
-        <form className="contactForm">
+        <form className="contactForm" ref={form} onSubmit={sendEmail}>
           <input type="text" className="name" placeholder="Your name" />
           <input type="email" className="email" placeholder="Your email" />
           <textarea
