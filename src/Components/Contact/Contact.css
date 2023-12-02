@@ -52,16 +52,22 @@
   cursor: pointer;
 }
 
-.links {
+.form-para {
+  font-size: larger;
+  font-weight: 200;
+  color: rgb(5, 190, 5);
+}
+
+/* .links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
 .link {
   object-fit: cover;
-  width: 8%;
-  margin: 4% 2%;
+  width: 3%;
+  margin: 2% 1%;
   cursor: pointer;
 }
 
