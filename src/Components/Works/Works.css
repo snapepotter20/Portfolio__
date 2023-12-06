@@ -1,98 +1,167 @@
+.slick-slide > div {
+  margin: 0 10px;
+  scroll-behavior: smooth;
+}
+
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: white;
+  border: 0.5px solid #ccc;
+  outline: #ccc;
+  background: black;
+}
 .works {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    color: white;
-    text-align: center;
-    margin-top: 8%;
-  }
-  
-  .worksTitle {
-    align-items: center;
-    font-size: 40px;
-    margin-bottom: 1.5%;
-  }
-  
-  .worksDescription {
-    margin: 0 auto;
-    margin-bottom: 1.5%;
-    font-size: 20px;
-    width: 600px;
-  }
-  
-  .worksBars {
-    display: flex;
-    margin: 8px auto;
-  }
-  
+  /* display: flex;
+    flex-direction: column; */
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.worksTitle {
+  align-items: center;
+  font-size: 40px;
+  margin-bottom: 1.5%;
+  color: black;
+}
+
+.worksDescription {
+  margin: 0 auto;
+  margin-bottom: 1.5%;
+  font-size: 20px;
+  width: 600px;
+  color: black;
+}
+
+.worksBars {
+  margin: 8px auto;
+  max-width: 78%;
+}
+
+.worksBars1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 16px;
+  padding: 10px 20px;
+  border: 0.5px solid #ccc;
+  max-width: 310px;
+}
+
+.worksBarsImg {
+  width: 234px;
+  height: 215px;
+  padding: 7px;
+  margin: 0 auto;
+}
+
+.worksBars1Heading {
+  color: black;
+}
+
+.worksBars1Para {
+  margin: 10px;
+  height: 170px;
+  word-break: break-word;
+  color: black;
+  /* overflow-y: scroll; */
+}
+
+.worksBars1Btn {
+  background: #8bd3bb;
+  padding: 2%;
+  margin: 4%;
+  margin-top: 8%;
+  border: none;
+  width: 110px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+}
+
+.worksBars1Btn > a {
+  color: black;
+}
+
+@media screen and (max-width: 995px) {
   .worksBars1 {
-    border-radius: 10px;
-    margin: 16px;
-    padding: 10px 20px;
-    background: rgb(50, 50, 50);
-    max-width: 310px;
+    margin: 10px;
+    padding: 26px 3px;
+    max-width: 94%;
   }
-  
   .worksBarsImg {
-    width: 280px;
-    height: 250px;
-    padding: 10px;
+    width: 119px;
+    height: 106px;
+    margin: 0 auto;
+  }
+
+  .worksBars1Btn {
+    width: 80px;
+    font-size: medium;
+    margin: 20px;
+    margin-top: 90px;
+  }
+  .worksBars1Heading {
+    font-size: medium;
+    margin: 20px;
+  }
+  .worksBars1Para {
+    margin-top: 15px;
+    margin-bottom: 18px;
+    height: 175px;
+    font-size: medium;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .worksBars {
+    flex-direction: column;
+    align-items: center;
+  }
+  .worksBars1 {
+    max-width: 98%;
     text-align: center;
   }
-  
+  .worksDescription {
+    width: 170px;
+  }
+  .worksTitle {
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  .worksBarsImg {
+    width: 75px;
+    height: 70px;
+    margin: 0 auto;
+  }
+  .worksBars1Heading {
+    font-size: small;
+    margin: 27px;
+  }
   .worksBars1Para {
-    margin-top: 10px;
-    height: 100px;
+    margin-top: 8px;
+    height: 65px;
+    font-size: small;
+    overflow: scroll;
   }
-  
   .worksBars1Btn {
-    background: #8bd3bb;
-    padding: 2%;
-    margin: 4%;
-    margin-top: 8%;
-    border: none;
-    width: 110px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: large;
+    width: 60px;
+    font-size: small;
+    margin: 20px auto;
+    margin-top: 110px;
+    padding: 7px;
   }
-  
-  .worksBars1Btn > a {
-      color: black;
-  }
-  
-  @media screen and (max-width: 560px) {
-      .worksBars {
-          flex-direction: column;
-          align-items: center;
-      }
-      .worksBars1 {
-          width: 70%;
-      }
-      .worksDescription{
-          width: 250px;
-      }
-      .worksTitle {
-          margin: 0 auto;
-          font-size: 30px;
-      }
-      .worksBarsImg {
-          width: 74px;
-          height: 80px;
-      } 
-      .worksBars1Heading {
-          font-size: medium;
-      }
-        .worksBars1Para {
-          margin-top: 8px;
-          height: 50px;
-          font-size: medium;
-        }
-      .worksBars1Btn {
-          width: 80px;
-          font-size: medium;
-          margin: 4%;
-          margin-top: 50%;
-      }
-  }
-  
+}

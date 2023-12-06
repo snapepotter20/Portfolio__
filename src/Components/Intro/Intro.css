@@ -37,6 +37,10 @@
   font-weight: 100;
 }
 
+.introText {
+  color: black;
+}
+
 .introName {
   color: #8bd3bb;
 }
@@ -45,11 +49,13 @@
   font-size: large;
   font-weight: 100;
   margin: 5% 0;
+  color: black;
 }
 .introPara2 {
   font-size: medium;
   font-weight: 200;
   margin: 2% 0;
+  color: black;
 }
 
 .bg {
@@ -67,6 +73,7 @@
   width: 110px;
   border-radius: 10px;
   cursor: pointer;
+  background-color: #8bd3bb;
 }
 
 @media screen and (max-width: 820px) {

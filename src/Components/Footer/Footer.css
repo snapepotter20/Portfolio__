@@ -1,20 +1,23 @@
 .footer {
-    color: white;
+    display: flex;
+    top: 100%;
+    color: black;
     text-align: center;
-    margin: 4% 0;
-    background: rgb(40, 40, 40);
-    padding: 1.5%;
+    margin: 12px 0;
+    background: rgb(204, 202, 202);
+    padding: 19px;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (max-width: 560px) {
-    .footer {
-        font-size: small;
-        max-width: 408px;
-    }
-}
 @media screen and (max-width: 840px) {
     .footer {
         font-size: small;
-        max-width: 608px;
+        /* top: 3264px; */
+    }
+}
+@media screen and (max-width: 560px) {
+    .footer {
+        font-size: small;
     }
 }

@@ -13,8 +13,10 @@
 
 .logo {
     object-fit: cover;
-    height: 4%;
-    width: 5%;
+    height: 63px;
+    width: 78px;
+    position: absolute;
+    left: 20px;
 }
 
 .desktopMenu {
@@ -43,14 +45,16 @@
     border-radius: 12px;
     background-color: white;
     color: black;
-    width: 12%;
+    width: 10%;
     cursor: pointer;
     font-size: medium;
+    position: absolute;
+    right: 36px;
 }
 
 .desktopMenuImg {
     object-fit: cover;
-    margin: 5%;
+    margin: 10px;
 }
 
 .active {
@@ -63,6 +67,8 @@
     display: none;
     height: 1.8rem;
     object-fit: cover;
+    position: absolute;
+    right: 20px;
 }
 
 .navMenu {
@@ -97,5 +103,10 @@
     }
     .desktopMenuBtn {
         display: none;
+        width: 180px;
     }
+    .navbar {
+        height: 50px;
+    }
+    
 }

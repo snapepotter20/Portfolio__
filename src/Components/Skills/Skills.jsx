@@ -12,7 +12,7 @@ const Skills = () => {
             <img src={reactImage} alt='skillsBar1Img' className='skillsBarImg'/>
             <div className='skillsBarText1'>
                 <h1 className='skillsBarText1h1'>Frontend</h1>
-                <div>
+                <div className='skillsBarBtnDiv'>
                     <button className='skillsBarText1Btn'>HTML</button>
                     <button className='skillsBarText1Btn'>CSS</button>
                     <button className='skillsBarText1Btn'>Bootstrap</button>
@@ -28,7 +28,7 @@ const Skills = () => {
             <img src={nodejsImage} alt='skillsBar2Img' className='skillsBarImg'/>
             <div className='skillsBarText1'>
                 <h1 className='skillsBarText1h1'>Backend and Database</h1>
-                <div>
+                <div className='skillsBarBtnDiv'>
                     <button className='skillsBarText1Btn'>NodeJS</button>
                     <button className='skillsBarText1Btn'>ExpressJS</button>
                     <button className='skillsBarText1Btn'>MySQL</button>
@@ -40,7 +40,7 @@ const Skills = () => {
             <img src={githubImage} alt='skillsBar3Img' className='skillsBarImg'/>
             <div className='skillsBarText1'>
                 <h1 className='skillsBarText1h1'>Tools and others</h1>
-                <div>
+                <div className='skillsBarBtnDiv'>
                     <button className='skillsBarText1Btn'>Github</button>
                     <button className='skillsBarText1Btn'>Git</button>
                     <button className='skillsBarText1Btn'>VSCode</button>

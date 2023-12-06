@@ -4,7 +4,7 @@ import { hireme, leetcode, hackerrank, codedamn } from "../../assets";
 
 const Others = () => {
   return (
-    <section className="others">
+    <div className="others">
       <h3 className="othersTitle">Resume link and few coding profiles.</h3>
       <div className="othersBars">
         <div className="othersBarsDiv">
@@ -48,7 +48,7 @@ const Others = () => {
           </a>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

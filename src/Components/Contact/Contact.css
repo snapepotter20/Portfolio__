@@ -7,7 +7,7 @@
   font-size: 40px;
   margin-bottom: 1.5%;
   margin-top: 60px;
-  color: #fff;
+  color: black;
 }
 
 .contactDesc {
@@ -15,7 +15,7 @@
   margin-bottom: 1.5%;
   font-size: 20px;
   width: 600px;
-  color: #fff;
+  color: black;
 }
 
 .contactForm {
@@ -35,14 +35,13 @@
   width: 100%;
   margin: 2%;
   padding: 2% 3%;
-  color: white;
-  border: none;
+  color: black;
+  border: 1px solid rgb(78, 78, 78);
   border-radius: 10px;
-  background: rgb(40, 40, 40);
 }
 
 .submitBtn {
-  background: white;
+  background: #8bd3bb;
   border: none;
   border-radius: 10px;
   padding: 10px;
