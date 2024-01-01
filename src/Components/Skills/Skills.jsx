@@ -1,5 +1,6 @@
 import React from 'react';
 import './Skills.css';
+import { SkillsList , SkillsList2 , SkillsList3 } from './SkillsList';
 import {githubImage , nodejsImage , reactImage} from '../../assets';
 
 const Skills = () => {
@@ -13,14 +14,11 @@ const Skills = () => {
             <div className='skillsBarText1'>
                 <h1 className='skillsBarText1h1'>Frontend</h1>
                 <div className='skillsBarBtnDiv'>
-                    <button className='skillsBarText1Btn'>HTML</button>
-                    <button className='skillsBarText1Btn'>CSS</button>
-                    <button className='skillsBarText1Btn'>Bootstrap</button>
-                    <button className='skillsBarText1Btn'>Material UI</button>
-                    <button className='skillsBarText1Btn'>Javascript</button>
-                    <button className='skillsBarText1Btn'>ReactJS</button>
-                    <button className='skillsBarText1Btn'>Redux</button>
-                    <button className='skillsBarText1Btn'>Responsive Design</button>
+                  {SkillsList.map((item)=>(
+                    <>
+                    <button className='skillsBarText1Btn' key={item.id}>{item.name}</button>
+                    </> 
+                  ))}
                 </div>
             </div>
          </div>
@@ -29,10 +27,11 @@ const Skills = () => {
             <div className='skillsBarText1'>
                 <h1 className='skillsBarText1h1'>Backend and Database</h1>
                 <div className='skillsBarBtnDiv'>
-                    <button className='skillsBarText1Btn'>NodeJS</button>
-                    <button className='skillsBarText1Btn'>ExpressJS</button>
-                    <button className='skillsBarText1Btn'>MySQL</button>
-                    <button className='skillsBarText1Btn'>MongoDB</button>
+                  {SkillsList2.map((item)=>(
+                    <>
+                    <button className='skillsBarText1Btn' key={item.id}>{item.name}</button>
+                    </>
+                  ))}
                 </div>
             </div>
          </div>
@@ -41,15 +40,11 @@ const Skills = () => {
             <div className='skillsBarText1'>
                 <h1 className='skillsBarText1h1'>Tools and others</h1>
                 <div className='skillsBarBtnDiv'>
-                    <button className='skillsBarText1Btn'>Github</button>
-                    <button className='skillsBarText1Btn'>Git</button>
-                    <button className='skillsBarText1Btn'>VSCode</button>
-                    <button className='skillsBarText1Btn'>Vercel</button>
-                    <button className='skillsBarText1Btn'>OOPS</button>
-                    <button className='skillsBarText1Btn'>Computer Networks</button>
-                    <button className='skillsBarText1Btn'>Operating System</button>
-                    <button className='skillsBarText1Btn'>Data structures</button>
-                    <button className='skillsBarText1Btn'>Algorithms</button>
+                  {SkillsList3.map((item)=>(
+                     <>
+                    <button className='skillsBarText1Btn' key={item.id}>{item.name}</button>     
+                     </>
+                  ))}
                 </div>
             </div>
          </div>
