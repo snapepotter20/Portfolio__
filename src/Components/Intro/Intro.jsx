@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Intro.css";
 import { myimg } from "../../assets";
+import { motion } from 'framer-motion';
+
 
 const Intro = () => {
   const [flag, setFlag] = useState(false);
@@ -27,10 +29,10 @@ const Intro = () => {
             in a professional environment while contributing to the industry in
             an innovative way. It will help me develop my existing skills and
             learn new skills with your firm. My proficiency in problem-solving
-            coupled with my fluency in technologies like HTML, CSS , Bootstrap ,
-            Javascript , ReactJS, NodeJS , ExpressJS and MongoDB positions me well for this
+            coupled with my fluency in technologies like HTML, CSS , Tailwind ,
+            Javascript , ReactJS, NextJS , NodeJS , ExpressJS and MongoDB positions me well for this
             endeavor. I have completed a course on responsive web design and
-            made few projects on it. And I have also successfully cleared the
+            made various projects on it. And I have also successfully cleared the
             Hackerrank CSS skill test and have also earned a CSS skill badge on
             LinkedIn. And my skills with data structures along with C++ and C
             further bolster my capabilities. The prospect of collaborating with
@@ -44,7 +46,13 @@ const Intro = () => {
           Read more...
         </button>
       </div>
+      <motion.div
+        initial={{ scale: 0.5 }}
+        animate={{ scale: 1 }}
+        transition={{ type: 'spring', stiffness: 100, damping: 10, }}
+      >
       <img src={myimg} alt="bgimage" className="bg" />
+      </motion.div>
     </div>
   );
 };

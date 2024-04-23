@@ -17,6 +17,11 @@
   width: 600px;
   color: black;
 }
+.contactDesc:hover {
+  cursor: pointer;
+  color: #8bd3bb;
+  border-bottom: #8bd3bb;
+}
 
 .contactForm {
   display: flex;

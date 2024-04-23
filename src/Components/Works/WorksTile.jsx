@@ -1,8 +1,14 @@
 import "./Works.css";
-import { expenseTracker , eCommerce , youtubeClone , zeviDashboard , productCart , urlShortener } from "../../assets";
+import { expenseTracker , eCommerce , youtubeClone , zeviDashboard , productCart , urlShortener , weatherapp } from "../../assets";
 
 
 export  const WorksTile = [
+    {
+        img:weatherapp,
+        heading:"Weather App(SkyGazer)",
+        para:"This is a full-stack application developed with React.js, Node.js, and Tailwind CSS. The application provides real-time weather information, including current weather conditions, atmospheric pressure, and wind details. It is designed to be responsive and follows the best practices in both frontend and backend development.",
+        button:"https://github.com/snapepotter20/WeatherApp-SkyGazer_Frontend"
+    },
     {
         img:eCommerce,
         heading:"E-commerce",
