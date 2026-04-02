@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --pointer-x: 50vw;
+    --pointer-y: 30vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at top left, rgba(34, 211, 238, 0.18), transparent 30%),
+      radial-gradient(circle at top right, rgba(251, 146, 60, 0.18), transparent 28%),
+      #07111f;
+    font-family: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: rgba(34, 211, 238, 0.3);
+    color: #f8fafc;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(circle at center, black 45%, transparent 100%);
+  }
+
+  .bg-noise {
+    background-image:
+      radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+      radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-position: 0 0, 24px 24px;
+    background-size: 48px 48px;
+  }
+
+  .bg-pointer-glow {
+    background:
+      radial-gradient(
+        420px circle at var(--pointer-x) var(--pointer-y),
+        rgba(34, 211, 238, 0.14),
+        transparent 55%
+      ),
+      radial-gradient(
+        320px circle at calc(var(--pointer-x) + 90px) calc(var(--pointer-y) - 70px),
+        rgba(251, 146, 60, 0.12),
+        transparent 50%
+      );
+  }
 }
