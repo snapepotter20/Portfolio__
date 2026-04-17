@@ -155,7 +155,7 @@ export const portfolioData = {
       label: "Resume",
       handle: "Latest PDF",
       note: "Detailed timeline, technical depth, and achievements.",
-      url: "https://drive.google.com/file/d/11xW3V6S_Hmwpn8iN6-lWhC-xyD9nsyCh/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1qRbczN4OgtKkQaUCdEWdoL5o-z0EnG4G/view?usp=sharing",
       icon: <FiFileText size={18} />,
     },
   ],
@@ -167,6 +167,6 @@ export const portfolioData = {
     github: "https://github.com/snapepotter20",
     linkedin: "https://www.linkedin.com/in/sahil-kumar-5487561ba/",
     leetcode: "https://leetcode.com/jumboclif42/",
-    resume: "https://drive.google.com/file/d/1XKBjqWNgnInpsD0ivKObpGFsq2rkOw_d/view?usp=sharing",
+    resume: "https://drive.google.com/file/d/1qRbczN4OgtKkQaUCdEWdoL5o-z0EnG4G/view?usp=sharing",
   },
 };
