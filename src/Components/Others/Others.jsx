@@ -10,7 +10,7 @@ const Others = () => {
         <div className="othersBarsDiv">
           <img src={hireme} alt="btnImg" className="othersBarsBtnImg" />
           <a
-            href="https://drive.google.com/file/d/1qRbczN4OgtKkQaUCdEWdoL5o-z0EnG4G/view?usp=sharing"
+            href="https://drive.google.com/file/d/101vaMxH8mPmj2HFL5DL9iEhKU5uFSWL-/view?usp=sharing"
             rel="noreferrer"
             target="_blank"
           >
