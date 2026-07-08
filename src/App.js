@@ -10,9 +10,7 @@ import { motion } from "framer-motion";
 import {
   FiArrowRight,
   FiBriefcase,
-  FiCode,
   FiGithub,
-  FiLayers,
   FiLinkedin,
   FiMail,
   FiMenu,
@@ -21,6 +19,7 @@ import {
 } from "react-icons/fi";
 import { portfolioData } from "./data/portfolio";
 import { useActiveSection } from "./hooks/useActiveSection";
+import { useTiltMotion } from "./hooks/useTiltMotion";
 
 const navItems = [
   { id: "about", label: "About" },
@@ -196,7 +195,7 @@ function App() {
 
             <div className="space-y-5">
               <p className="font-display text-sm uppercase tracking-[0.35em] text-white/60">
-                React Engineer • Full Stack Builder • System Thinker
+                AI Software Engineer • Full Stack Development • LLMs & Agentic AI
               </p>
               <h1 className="max-w-4xl font-display text-5xl leading-none text-white sm:text-6xl lg:text-7xl">
                 {portfolioData.hero.title}
@@ -208,15 +207,12 @@ function App() {
 
             <div className="grid gap-4 sm:grid-cols-3">
               {portfolioData.metrics.map((metric) => (
-                <div
-                  key={metric.label}
-                  className="rounded-[28px] border border-white/10 bg-white/5 p-5 shadow-panel"
-                >
+                <DepthCard key={metric.label} className="h-full" contentClassName="rounded-[28px] border border-white/10 bg-white/5 p-5 shadow-panel">
                   <p className="text-3xl font-semibold text-white">{metric.value}</p>
                   <p className="mt-2 text-sm leading-6 text-white/60">
                     {metric.label}
                   </p>
-                </div>
+                </DepthCard>
               ))}
             </div>
 
@@ -245,20 +241,19 @@ function App() {
             transition={{ ...fadeInUp.transition, delay: 0.1 }}
             className="relative"
           >
-            <div className="absolute inset-0 rounded-[42px] bg-gradient-to-br from-cyan/25 via-transparent to-orange/20 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[42px] border border-white/12 bg-panel p-5 shadow-panel">
-              <div className="grid gap-5">
-                <div className="rounded-[34px] border border-white/10 bg-white/5 p-4">
+            <DepthCard contentClassName="overflow-hidden rounded-[42px] border border-white/12 bg-panel p-6 shadow-panel">
+              <div className="grid gap-5 [transform-style:preserve-3d]">
+                <div className="rounded-[34px] border border-white/10 bg-white/5 p-5">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-sm uppercase tracking-[0.28em] text-white/45">
-                        Current Identity
+                        AI Full-Stack Engineer
                       </p>
                       <h2 className="mt-3 text-2xl font-semibold text-white">
-                        Associate Software Engineer
+                        Java, Python, Spring Boot, React.js, and LLM-powered products
                       </h2>
-                      <p className="mt-2 text-sm text-white/62">
-                        Bosch Global Software Technologies
+                      <p className="mt-3 text-sm leading-7 text-white/65">
+                        Hands-on with OpenAI API, Claude API, RAG, prompt chaining, MCP, structured outputs, and AI-assisted development workflows.
                       </p>
                     </div>
                     <img
@@ -270,24 +265,29 @@ function App() {
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <SignalCard
-                    icon={<FiCode size={20} />}
-                    label="Frontend"
-                    value="React, Redux Toolkit, Angular, TypeScript"
-                  />
-                  <SignalCard
-                    icon={<FiLayers size={20} />}
-                    label="Backend"
-                    value="Spring Boot, Node.js, REST APIs, JWT, RBAC"
-                  />
+                  <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
+                    <p className="text-sm uppercase tracking-[0.24em] text-cyan">AI Engineering</p>
+                    <p className="mt-3 text-base leading-7 text-white/78">LLMs, RAG, prompt engineering, agentic AI, MCP, function calling, structured outputs, Claude API, and OpenAI API.</p>
+                  </div>
+                  <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
+                    <p className="text-sm uppercase tracking-[0.24em] text-orange">Production Backend</p>
+                    <p className="mt-3 text-base leading-7 text-white/78">30+ production REST APIs, microservices, Spring Security, JWT, RBAC, caching, and performance optimization.</p>
+                  </div>
                 </div>
 
                 <div className="rounded-[34px] border border-white/10 bg-slate-950/65 p-5">
                   <p className="text-sm uppercase tracking-[0.28em] text-white/45">
-                    Focus Areas
+                    Daily Tooling
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    {portfolioData.focusAreas.map((item) => (
+                    {[
+                      "Claude Code",
+                      "Cursor AI",
+                      "GitHub Copilot",
+                      "ChatGPT",
+                      "Gemini",
+                      "Codex",
+                    ].map((item) => (
                       <span
                         key={item}
                         className="rounded-full border border-cyan/20 bg-cyan/10 px-4 py-2 text-sm text-cyan"
@@ -298,23 +298,26 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
+            </DepthCard>
           </motion.div>
         </section>
 
         <section className="grid gap-6 py-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <motion.div {...fadeInUp} className="rounded-[34px] border border-white/10 bg-white/5 p-6 shadow-panel">
-            <SectionLabel eyebrow="Profile" title="Built for teams that care about scale, speed, and clarity." />
+          <motion.div {...fadeInUp}>
+            <DepthCard contentClassName="rounded-[34px] border border-white/10 bg-white/5 p-6 shadow-panel h-full">
+              <SectionLabel eyebrow="Profile" title="Built for teams that care about scale, speed, and clarity." />
+            </DepthCard>
           </motion.div>
 
           <motion.div
             {...fadeInUp}
             transition={{ ...fadeInUp.transition, delay: 0.1 }}
-            className="rounded-[34px] border border-white/10 bg-panel p-6 shadow-panel"
           >
-            <p className="text-lg leading-8 text-white/72">
-              {portfolioData.summary}
-            </p>
+            <DepthCard contentClassName="rounded-[34px] border border-white/10 bg-panel p-6 shadow-panel h-full">
+              <p className="text-lg leading-8 text-white/72">
+                {portfolioData.summary}
+              </p>
+            </DepthCard>
           </motion.div>
         </section>
 
@@ -329,12 +332,12 @@ function App() {
 
           <div className="grid gap-6">
             {portfolioData.experience.map((role, index) => (
-              <motion.article
+              <motion.div
                 key={role.company + role.title}
                 {...fadeInUp}
                 transition={{ ...fadeInUp.transition, delay: 0.08 * index }}
-                className="rounded-[34px] border border-white/10 bg-white/5 p-6 shadow-panel"
               >
+                <DepthCard contentClassName="rounded-[34px] border border-white/10 bg-white/5 p-6 shadow-panel">
                 <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
                   <div className="space-y-3">
                     <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.24em] text-white/55">
@@ -379,7 +382,8 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </motion.article>
+                </DepthCard>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -416,12 +420,12 @@ function App() {
 
           <div className="grid gap-6 lg:grid-cols-2">
             {filteredProjects.map((project, index) => (
-              <motion.article
+              <motion.div
                 key={project.title}
                 {...fadeInUp}
                 transition={{ ...fadeInUp.transition, delay: 0.06 * index }}
-                className="group overflow-hidden rounded-[34px] border border-white/10 bg-panel shadow-panel"
               >
+                <DepthCard contentClassName="group overflow-hidden rounded-[34px] border border-white/10 bg-panel shadow-panel h-full">
                 <div className="relative overflow-hidden border-b border-white/10">
                   <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/50 to-transparent" />
                   <img
@@ -488,7 +492,8 @@ function App() {
                     ) : null}
                   </div>
                 </div>
-              </motion.article>
+                </DepthCard>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -504,26 +509,27 @@ function App() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {portfolioData.skillGroups.map((group, index) => (
-              <motion.article
+              <motion.div
                 key={group.title}
                 {...fadeInUp}
                 transition={{ ...fadeInUp.transition, delay: 0.05 * index }}
-                className="rounded-[30px] border border-white/10 bg-white/5 p-6 shadow-panel"
               >
-                <p className="text-sm uppercase tracking-[0.3em] text-white/45">
-                  {group.title}
-                </p>
-                <div className="mt-5 flex flex-wrap gap-3">
-                  {group.items.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-cyan/18 bg-cyan/10 px-4 py-2 text-sm text-cyan"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </motion.article>
+                <DepthCard contentClassName="rounded-[30px] border border-white/10 bg-white/5 p-6 shadow-panel h-full">
+                  <p className="text-sm uppercase tracking-[0.3em] text-white/45">
+                    {group.title}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {group.items.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-cyan/18 bg-cyan/10 px-4 py-2 text-sm text-cyan"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </DepthCard>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -538,63 +544,70 @@ function App() {
           </motion.div>
 
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
-            <motion.article
+            <motion.div
               {...fadeInUp}
-              className="rounded-[34px] border border-white/10 bg-panel p-6 shadow-panel"
             >
-              <p className="text-sm uppercase tracking-[0.3em] text-white/45">
-                Education
-              </p>
-              <h3 className="mt-4 text-2xl font-semibold text-white">
-                {portfolioData.education.degree}
-              </h3>
-              <p className="mt-2 text-white/65">{portfolioData.education.school}</p>
-              <p className="mt-4 text-sm text-white/55">
-                {portfolioData.education.period} • CGPA {portfolioData.education.cgpa}
-              </p>
-            </motion.article>
+              <DepthCard contentClassName="rounded-[34px] border border-white/10 bg-panel p-6 shadow-panel h-full">
+                <p className="text-sm uppercase tracking-[0.3em] text-white/45">
+                  Education
+                </p>
+                <h3 className="mt-4 text-2xl font-semibold text-white">
+                  {portfolioData.education.degree}
+                </h3>
+                <p className="mt-2 text-white/65">{portfolioData.education.school}</p>
+                <p className="mt-4 text-sm text-white/55">
+                  {portfolioData.education.period} • CGPA {portfolioData.education.cgpa}
+                </p>
+              </DepthCard>
+            </motion.div>
 
-            <motion.article
+            <motion.div
               {...fadeInUp}
               transition={{ ...fadeInUp.transition, delay: 0.08 }}
-              className="rounded-[34px] border border-white/10 bg-white/5 p-6 shadow-panel"
             >
-              <p className="text-sm uppercase tracking-[0.3em] text-white/45">
-                Achievements
-              </p>
-              <ul className="mt-5 space-y-4">
-                {portfolioData.achievements.map((item) => (
-                  <li key={item} className="flex gap-3 text-white/72">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-orange" />
-                    <span className="leading-7">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.article>
+              <DepthCard contentClassName="rounded-[34px] border border-white/10 bg-white/5 p-6 shadow-panel h-full">
+                <p className="text-sm uppercase tracking-[0.3em] text-white/45">
+                  Achievements
+                </p>
+                <ul className="mt-5 space-y-4">
+                  {portfolioData.achievements.map((item) => (
+                    <li key={item} className="flex gap-3 text-white/72">
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-orange" />
+                      <span className="leading-7">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </DepthCard>
+            </motion.div>
           </div>
 
           <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {portfolioData.profiles.map((profile, index) => (
-              <motion.a
+              <motion.div
                 key={profile.label}
                 {...fadeInUp}
                 transition={{ ...fadeInUp.transition, delay: 0.05 * index }}
-                href={profile.url}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-[28px] border border-white/10 bg-white/5 p-5 shadow-panel transition hover:border-cyan/40 hover:bg-white/8"
               >
-                <div className="flex items-center gap-3 text-cyan">
-                  {profile.icon}
-                  <span className="text-sm uppercase tracking-[0.24em] text-white/45">
-                    {profile.label}
-                  </span>
-                </div>
-                <p className="mt-4 text-lg font-medium text-white">
-                  {profile.handle}
-                </p>
-                <p className="mt-2 text-sm text-white/55">{profile.note}</p>
-              </motion.a>
+                <DepthCard contentClassName="rounded-[28px] border border-white/10 bg-white/5 p-5 shadow-panel h-full transition hover:border-cyan/40 hover:bg-white/8">
+                  <a
+                    href={profile.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block"
+                  >
+                    <div className="flex items-center gap-3 text-cyan">
+                      {profile.icon}
+                      <span className="text-sm uppercase tracking-[0.24em] text-white/45">
+                        {profile.label}
+                      </span>
+                    </div>
+                    <p className="mt-4 text-lg font-medium text-white">
+                      {profile.handle}
+                    </p>
+                    <p className="mt-2 text-sm text-white/55">{profile.note}</p>
+                  </a>
+                </DepthCard>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -602,8 +615,8 @@ function App() {
         <section id="contact" ref={contactRef} className="py-14">
           <motion.div
             {...fadeInUp}
-            className="overflow-hidden rounded-[42px] border border-white/12 bg-panel p-8 shadow-panel sm:p-10"
           >
+            <DepthCard contentClassName="overflow-hidden rounded-[42px] border border-white/12 bg-panel p-8 shadow-panel sm:p-10">
             <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
               <div>
                 <p className="text-sm uppercase tracking-[0.35em] text-orange">
@@ -647,6 +660,7 @@ function App() {
                 />
               </div>
             </div>
+            </DepthCard>
           </motion.div>
         </section>
       </main>
@@ -673,16 +687,26 @@ function SectionLabel({ eyebrow, title, description }) {
   );
 }
 
-function SignalCard({ icon, label, value }) {
+function DepthCard({ children, className = "", contentClassName = "" }) {
+  const { transform, glow, handlers } = useTiltMotion(10);
+
   return (
-    <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
-      <div className="flex items-center gap-3 text-cyan">
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan/20 bg-cyan/10">
-          {icon}
-        </span>
-        <p className="text-sm uppercase tracking-[0.24em] text-white/45">{label}</p>
+    <div
+      {...handlers}
+      className={`depth-shell relative ${className}`}
+    >
+      <div
+        className={`depth-card relative ${contentClassName}`}
+        style={{ transform }}
+      >
+        <div
+          className="pointer-events-none absolute inset-0 rounded-[inherit]"
+          style={{
+            background: `radial-gradient(circle at ${glow.x} ${glow.y}, rgba(103, 232, 249, ${glow.opacity * 0.18}), transparent 38%)`,
+          }}
+        />
+        <div className="relative z-10 [transform-style:preserve-3d]">{children}</div>
       </div>
-      <p className="mt-4 text-base leading-7 text-white/78">{value}</p>
     </div>
   );
 }

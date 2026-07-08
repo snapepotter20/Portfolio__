@@ -69,4 +69,24 @@
         transparent 50%
       );
   }
+
+  .depth-shell {
+    perspective: 1600px;
+  }
+
+  .depth-card {
+    transform-style: preserve-3d;
+    transition:
+      transform 260ms ease,
+      border-color 220ms ease,
+      box-shadow 220ms ease,
+      background-color 220ms ease;
+    will-change: transform;
+  }
+
+  .depth-shell:hover .depth-card {
+    box-shadow:
+      0 28px 100px rgba(8, 15, 30, 0.42),
+      0 0 0 1px rgba(103, 232, 249, 0.05);
+  }
 }
