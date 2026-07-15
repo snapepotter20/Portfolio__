@@ -17,6 +17,7 @@ import {
   FiPhone,
   FiX,
 } from "react-icons/fi";
+import { AskSahilAI } from "./Components/AskSahilAI";
 import { portfolioData } from "./data/portfolio";
 import { useActiveSection } from "./hooks/useActiveSection";
 import { useTiltMotion } from "./hooks/useTiltMotion";
@@ -27,6 +28,7 @@ const navItems = [
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
   { id: "proof", label: "Proof" },
+  { id: "ask-ai", label: "Ask AI" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -612,6 +614,8 @@ function App() {
           </div>
         </section>
 
+        <AskSahilAI portfolioData={portfolioData} />
+
         <section id="contact" ref={contactRef} className="py-14">
           <motion.div
             {...fadeInUp}
@@ -626,11 +630,21 @@ function App() {
                   Let&apos;s build something that feels sharp, useful, and impossible to ignore.
                 </h2>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
-                  I enjoy working on frontend-heavy products, secure full-stack
-                  platforms, and systems where performance and maintainability both
-                  matter. If your team is building something ambitious, I&apos;d love to
-                  contribute.
+                  I enjoy working on AI-powered products, secure full-stack
+                  platforms, and systems where performance, reliability, and developer
+                  velocity all matter. If your team is building something ambitious,
+                  I&apos;d love to contribute.
                 </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {portfolioData.aiPrompts.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-cyan/20 bg-cyan/10 px-4 py-2 text-sm text-cyan"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               <div className="grid gap-4">
@@ -666,8 +680,7 @@ function App() {
       </main>
 
       <footer className="border-t border-white/10 px-5 py-6 text-center text-sm text-white/45 sm:px-8 lg:px-10">
-        Crafted in React, styled with Tailwind CSS, and shaped around real work
-        from Sahil Kumar&apos;s resume.
+        Crafted in React, styled with Tailwind CSS, and shaped around real work.
       </footer>
     </div>
   );

@@ -163,6 +163,12 @@ export const portfolioData = {
     email: "skk280540@gmail.com",
     phone: "+91 8290977266",
   },
+  aiPrompts: [
+    "Ask me about building RAG systems",
+    "Ask me about production REST APIs",
+    "Ask me about AI-assisted developer tools",
+    "Ask me about OrderCraft AI",
+  ],
   links: {
     github: "https://github.com/snapepotter20",
     linkedin: "https://linkedin.com/in/sahilkumar-fullstack",
